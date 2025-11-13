@@ -162,6 +162,8 @@ def predict_profession():
     pred_label = profession_labelencoder.inverse_transform([pred_class])[0]
     return jsonify({"predicted_profession": pred_label})
 
-
+@app.route('/')
+def hello():
+    return "Welocome to Rupee Radar"
 if __name__ == "__main__":
     app.run(debug=True)
